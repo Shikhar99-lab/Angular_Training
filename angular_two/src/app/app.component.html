@@ -1,0 +1,35 @@
+<div class="container">
+  <div class="mb-3">
+    <label for="roleSelect" class="form-label">Filter by Role</label>
+    <select class="form-select" #roleSelect [(ngModel)]="selectedRole" (change)="filterData()">
+      <option value="all">All Roles</option>
+      @for (role of roles; track $index){
+      <option value={{role}}>{{role}}</option>
+      }
+    </select>
+  </div>
+  <input class="form-control m-1" placeholder="Enter First Name" type="text" id="firstName" />
+  <input class="form-control m-1" placeholder="Enter Last Name" type="text" id="lastName" />
+  <input class="form-control m-1" placeholder="Enter Role" type="text" id="role" />
+  <button class="btn btn-primary m-1">Add Cricketer</button>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col" id="firstNameHeader">First Name</th>
+        <th scope="col" id="lastNameHeader">Last Name</th>
+        <th scope="col">Role</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody id="tableData">
+      @for (player of data; track $index){
+      <tr>
+        <td>{{ player.firstName }}</td>
+        <td>{{ player.lastName }}</td>
+        <td>{{ player.role }}</td>
+        <td><button class="btn btn-sm btn-danger" (click)="removeItem($index)">Remove</button></td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>

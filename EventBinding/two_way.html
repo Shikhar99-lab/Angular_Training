@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        names = [];
+        function draw() {
+            main = document.getElementById("main");
+            main.innerHTML = "";
+            for (i = 0; i < names.length; i++) {
+                main.innerHTML += "<li>" + names[i] + "<button onclick='removeitem( "+ i +" )'>remove</button></li>"
+            }
+        }
+        function demo() {
+            var nameField = document.getElementById("name");
+            nameField.value = name;
+            draw();
+        }
+        function nameAdded() {
+            var nameField = document.getElementById("name");
+            names.push(nameField.value);
+            draw();
+        }
+        function removeitem(i){
+            names.splice(i,1);
+            draw();
+        }
+    </script>
+</head>
+<body onload="demo()">
+    <input type="text" id="name" />
+    <button onclick="nameAdded()">Add Name</button>
+    <ul id="main"></ul>
+</body>
+
+</html>

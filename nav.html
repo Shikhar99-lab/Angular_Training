@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Click(a) {
+            var main = document.getElementById("main");
+            main.innerHTML = "<h1>" + a +" Page Clicked!</h1>"
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        <button onclick="Click('Home')">Home</button> |
+        <button onclick="Click('Service')">Service</button> |
+        <button onclick="Click('About')">About Us</button> |
+        <button onclick="Click('Contact')">Contact Us</button>
+    </nav>
+    <div id="main"></div>
+</body>
+
+</html>

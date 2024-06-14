@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        arr = [
+            { fname: "Virat", lname: "Kohli", role: "Batsman" },
+            { fname: "Rohit", lname: "Sharma", role: "Batsman" },
+            { fname: "MS", lname: "Dhoni", role: "Captain" },
+            { fname: "Yuvraj", lname: "Singh", role: "AllRounder" },
+        ]
+
+        var arr2 = arr.map(a => {return {...a}})
+        arr[0]="Wonderful";
+        alert(JSON.stringify(arr));
+        alert(JSON.stringify(arr2));
+    </script> n
+</head>
+<body>
+    
+</body>
+</html>

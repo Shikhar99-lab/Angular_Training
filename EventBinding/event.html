@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function demo(){
+        names = ["Sachin", "Saurav", "Rahul", "Yuvraj"]
+        main = document.getElementById("main");
+        // main = document.getElementByClassName("main");
+        main.innerHTML = "";
+        for (i = 0; i < names.length; i++) {
+            main.innerHTML += "<li>" + names[i] + "</li>"
+        }
+        console.log(names);
+    }
+    </script>
+</head>
+
+<body>
+    <button onmouseover="demo()"> Hover Me !</button>
+    <ul id="main"></ul>
+
+</body>
+</html>

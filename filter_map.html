@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        cricketers = [
+            { fname: "Virat", lname: "Kohli", role: "Batsman" },
+            { fname: "Rohit", lname: "Sharma", role: "Batsman" },
+            { fname: "MS", lname: "Dhoni", role: "Captain" },
+            { fname: "Yuvraj", lname: "Singh", role: "AllRounder" },
+        ]
+        batsman = cricketers.filter((n1) => n1.role == "Batsman");
+        alert(JSON.stringify(batsman));
+        legend = ((n1)=>n1.fname == "MS" ? "Legend " + n1.fname : n1.fname)
+        legends = cricketers.map(legend)
+        alert(JSON.stringify(legends))
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

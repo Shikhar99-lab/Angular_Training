@@ -1,0 +1,13 @@
+
+<div class="conainer m-2">
+  <main class="main">
+    <h1>Hello {{title}}</h1>
+    <input type="text" [(ngModel)]="newName" /><button class="btn btn-success m-2" (click)="nameAdded()">Add</button>
+    <p>{{newName}}</p>
+    <ul>
+      @for (name of names; track $index){
+        <li>{{name}} <button class="btn btn-danger m-2" (click)="remove($index)">Remove</button></li>
+      }
+    </ul>
+    </main>
+</div>
