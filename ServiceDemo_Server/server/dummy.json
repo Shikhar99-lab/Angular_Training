@@ -1,0 +1,14 @@
+{"cricketers": [
+    {
+        "id": "0",
+        "fname": "Sachin",
+        "lname": "Tendulkar",
+        "role": "Batsman"
+    },
+    {
+        "id": "1",
+        "fname": "Jaspreet",
+        "lname": "Bumrah",
+        "role": "Bowler"
+    }
+]}

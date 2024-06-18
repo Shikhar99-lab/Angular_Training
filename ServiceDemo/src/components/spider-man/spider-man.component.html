@@ -1,0 +1,14 @@
+<h1>Missions for Spiderman</h1>
+
+<div class="conatiner">
+    <ul>
+        @for (mission of missions; track $index) {
+        <li class="m-3">
+            <div class="row">
+                <div class="col-6">{{ mission }}</div>
+                <div class="col-6"><button class="btn btn-danger" (click)="removeMissions($index)">Remove</button></div>
+            </div>
+        </li>
+        }
+    </ul>
+</div> 
