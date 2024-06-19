@@ -16,6 +16,9 @@ export class IronManComponent {
 
   }
   addMission():void{
-    this.newMission = this.endgameservice.addMissions(this.newMission);
+    this.endgameservice.addMissions({
+      id:"100",
+      mission:this.newMission
+    }).subscribe();
   }
 }

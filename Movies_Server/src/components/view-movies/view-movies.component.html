@@ -1,0 +1,12 @@
+<div class="container">
+    <ul>
+        @for (movie of movies; track $index) {
+        <li class="m-3">
+            <div class="row">
+                <div class="col-6">{{ movie.title }}</div>
+                <div class="col-6"><button class="btn btn-danger" (click)="removeMovies(movie.id)">Remove</button></div>
+            </div>
+        </li>
+        }
+    </ul>
+</div> 
